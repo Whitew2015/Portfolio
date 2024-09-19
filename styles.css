@@ -7,6 +7,8 @@
 body {
     padding: 0;
     margin: 0;
+    text-align: center;
+    background-color: #232946;
 }
 
 #page-wrapper {
@@ -22,6 +24,7 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
+    border-bottom: 1px solid #121629;
 }
 
 main {
@@ -53,11 +56,149 @@ main {
 #navbar a {
     text-decoration: none;
     color: #fff;
+    padding: 0 10px;
+}
+
+#navbar a:hover {
+    background-color: #dfdfe2;
+    color: #1b1b32;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+}
+
+section {
+    padding: 70px 0;
+    min-height: 100vh;
 }
 
 #welcome-section {
-    text-align: center;
-    background-color: black;
-    height: 100vh;
-    color: white;
+    background-color: #232946;
+    color: #fffffe;
+    flex-direction: column;
+    display: flex;
+}
+
+#welcome-section h1 {
+    margin-top: 30vh;
+}
+
+#welcome-section p {
+    color: #ab7b82;
+    font-size: 30px;
+    margin: 25px 0;
+    font-style: italic;
+}
+
+#projects {
+    background-color: #b8c1ec;
+    color: #232946;
+}
+
+#projects h1 {
+    border-bottom: 5px solid #232946;
+    width: fit-content;
+    margin: auto;
+}
+
+#projects .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    place-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#projects .project-tile {
+    height: 525px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #232946;
+    text-decoration: none;
+    color: #d4d8f0;
+    border-radius: 5px;
+    box-shadow: 8px 8px 10px 5px rgba(100, 100, 100, 0.3);
+}
+
+#projects .project-tile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#projects .project-tile p {
+    font-size: 25px;
+    padding: 10px;
+}
+
+#projects .project-tile span {
+    opacity: 0%;
+    padding: 0 5px;
+}
+
+#projects .project-tile:hover span {
+    opacity: 100%;
+    color: #ab7b82;
+    transition: opacity 0.25s ease-in;
+}
+
+#contact-info {
+    background-color: #232946;
+    color: #fffffe;
+}
+
+#contact-info h1 {
+    margin-top: 300px;
+}
+
+#contact-info .social-medias {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 30px;
+}
+
+
+#contact-info .social-media {
+    text-decoration: none;
+    color: #fffffe;
+    transition: transform 0.2s ease-in;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    font-size: 22px;
+}
+
+#contact-info .social-media:hover {
+    transform: translateY(10px);
+}
+
+footer {
+    border-top: 3px solid #ab7b82;
+    color: #fffffe;
+    font-size: 25px;
+    padding: 30px;
+}
+
+@media only screen and (width < 700px) {
+    h1 {
+        font-size: 50px;
+    }
+    #projects .project-tile {
+        height: 600px;
+        width: 100%;
+    }
 }
